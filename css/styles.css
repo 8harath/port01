@@ -75,12 +75,13 @@
 /* ------------------------------------------------------------------- 
  * ## fonts 
  * ------------------------------------------------------------------- */
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Serif+Text:ital@0;1&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Cinzel&display=swap");
 
 :root {
 
     --font-1 : "Public Sans", sans-serif;
     --font-2 : "DM Serif Display", serif;
+    --font-3 : "Cinzel", serif;
 
     /* monospace
     */
@@ -3494,7 +3495,7 @@ img.u-pull-left {
     height           : 8px;
     width            : 8px;
     border-radius    : 50%;
-    background-color : var(--color-1);
+    background-color : var (--color-1);
     position         : absolute;
     top              : var(--timeline-top-adjust);
     left             : 0;
@@ -3633,13 +3634,8 @@ img.u-pull-left {
 .folio-list__item-link:focus .folio-list__item-pic::after,
 .folio-list__item-link:hover .folio-list__item-pic::after {
     opacity    : 1;
-    visibility : visible;
+    visibility  : visible;
     transform  : scale(1);
-}
-
-.folio-list__item-link:focus .folio-list__item-text::before,
-.folio-list__item-link:hover .folio-list__item-text::before {
-    width : 100%;
 }
 
 .folio-list__item-pic {
