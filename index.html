@@ -160,7 +160,7 @@
                                 or established companies as an intern to further enhance 
                                 my skills.
                             </p>
-                            <a href="https://drive.google.com/file/d/1zlwvZ-JBJgR0RLuK9VaJk8-MkJMpfINA/view?usp=sharing" class="btn btn--medium u-fullwidth" data-animate-el>Download CV</a>
+                            <a href="https://drive.google.com/file/d/1ZKiInTri95ZnkAIYlB9Dqroq-ArKxTB-/view?usp=sharing" class="btn btn--medium u-fullwidth" data-animate-el>View My Resume</a>
 
                         </div>
                     </div>
@@ -474,24 +474,18 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const projectLinks = document.querySelectorAll('.folio-list__proj-link');
+            
             projectLinks.forEach(link => {
                 link.addEventListener('click', function(event) {
                     event.preventDefault();
                     const modalId = this.getAttribute('href');
-                    const modal = document.querySelector(modalId);
-                    if (modal) {
-                        modal.hidden = false;
-                        modal.classList.add('modal-popup--visible');
-                    }
-                });
-            });
-
-            const modals = document.querySelectorAll('.modal-popup');
-            modals.forEach(modal => {
-                modal.addEventListener('click', function(event) {
-                    if (event.target === modal) {
-                        modal.hidden = true;
-                        modal.classList.remove('modal-popup--visible');
+                    const modalContent = document.querySelector(modalId);
+                    
+                    if (modalContent) {
+                        const instance = basicLightbox.create(modalContent.innerHTML, {
+                            className: 'modal-popup'
+                        });
+                        instance.show();
                     }
                 });
             });
